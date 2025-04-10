@@ -304,12 +304,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Aniket Desai** - *Lead Developer & Hardware Engineer* - [@recursionReaper](https://github.com/recursionReaper)
   - System Architecture
   - Hardware Integration
-  - Frontend Development
+  - Backend architecture
   - Performance Optimization
 
 - **Yash Ogale** - *AI Engineer & System Architect* - [@yashogale30](https://github.com/yashogale30)
   - AI Model Development
-  - Backend Architecture
+  - Frontend Development
   - Stream Processing
   - System Integration
 
