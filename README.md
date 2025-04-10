@@ -2,7 +2,9 @@
 
 <div align="center">
 
-![HMS Logo](public/hms-logo.png)
+  
+![HMS_inverted (1)](https://github.com/user-attachments/assets/03348dea-dd72-4115-a9fc-2146fc4ac38c)
+
 
 *An advanced AI-powered home surveillance system integrating computer vision, real-time processing, and intelligent notifications*
 
