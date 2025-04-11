@@ -2,7 +2,9 @@
 
 <div align="center">
 
-![HMS Logo](public/hms-logo.png)
+  
+![HMS_inverted (1)](https://github.com/user-attachments/assets/03348dea-dd72-4115-a9fc-2146fc4ac38c)
+
 
 *An advanced AI-powered home surveillance system integrating computer vision, real-time processing, and intelligent notifications*
 
@@ -299,15 +301,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- **Aniket Desai** - *Lead Developer & Hardware Engineer* - [@recursionReaper](https://github.com/recursionReaper)
+- **Aniket Desai** - [@recursionReaper](https://github.com/recursionReaper)
   - System Architecture
   - Hardware Integration
-  - Frontend Development
+  - Backend architecture
   - Performance Optimization
 
-- **Yash Ogale** - *AI Engineer & System Architect* - [@yashogale30](https://github.com/yashogale30)
+- **Yash Ogale** - [@yashogale30](https://github.com/yashogale30)
   - AI Model Development
-  - Backend Architecture
+  - Frontend Development
   - Stream Processing
   - System Integration
 
