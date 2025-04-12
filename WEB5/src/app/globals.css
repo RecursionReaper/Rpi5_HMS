@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  --foreground: #ededed;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --card-bg: rgba(26, 26, 26, 0.8);
+  --nav-bg: rgba(15, 15, 15, 0.95);
+  
+  /* New variables for enhanced effects */
+  --glow-opacity: 0.15;
+  --transition-speed: 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --glow-opacity: 0.25; /* More visible in dark mode */
+  }
+}
+
+/* Base Styles (Enhanced but compatible) */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Automatic Enhancement Magic */
+* {
+  transition: 
+    background-color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
+}
+
+/* Enhanced existing elements without changing markup */
+.card {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-speed) ease !important;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}
+
+.nav-link.active {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(59, 130, 246, 0.2),
+    transparent
+  ) !important;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Background enhancements */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, var(--glow-opacity)) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(99, 102, 241, var(--glow-opacity)) 0%, transparent 40%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Scrollbar (works automatically) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Input fields enhancement */
+input, textarea, select {
+  transition: all var(--transition-speed) ease !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 2px var(--accent) !important;
+  border-color: var(--accent) !important;
+  outline: none;
+}
+
+/* Add to your existing globals.css */
+.stream-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 0.75rem; /* matches your rounded-xl */
+}
+
+.stream-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stream-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(39, 39, 42, 0.5); /* zinc-800/50 */
+}
+
+@media (max-width: 640px) {
+  .stream-container {
+    padding-bottom: 75%; /* 4:3 for mobile */
+  }
+}
