@@ -199,7 +199,7 @@ export default function AboutPage() {
                       <span>GitHub</span>
                     </a>
                     <a
-                      href="https://linkedin.com/in/aniketdesai"
+                      href="https://www.linkedin.com/in/aniket-desai-a78a1419b/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 text-gray-300 hover:text-indigo-400 transition-colors"
@@ -239,7 +239,7 @@ export default function AboutPage() {
                       <span>GitHub</span>
                     </a>
                     <a
-                      href="https://linkedin.com/in/yashogale"
+                      href="https://in.linkedin.com/in/yash-ogale-03a30b2aa"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors"
