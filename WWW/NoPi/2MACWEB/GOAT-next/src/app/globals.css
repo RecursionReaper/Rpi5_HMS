@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  --foreground: #ededed;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --card-bg: rgba(26, 26, 26, 0.8);
+  --nav-bg: rgba(15, 15, 15, 0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .card {
+    @apply bg-black/40 backdrop-blur-sm rounded-lg p-6 border border-gray-800;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 rounded-md transition-colors hover:bg-gray-800/50;
+  }
+
+  .nav-link.active {
+    @apply bg-blue-600 text-white;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors;
+  }
+
+  .grid-gallery {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+  }
+}
